@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Bebas+Neue&display=swap');
+
+* {box-sizing: border-box;}
+body{
+  font-family: 'Aldrich', sans-serif ;  
+  font-size: 24px;
+}
+.compnent-wrapper{
+  width: 360px;
+    margin-left: 25%;
+ 
+}
+.select-section{
+  display: flex;
+  padding: 8px;
+  margin: 4px;
+  justify-content: space-between;
+  background-color:#0E1119 ;
+  border-radius: 4px;
+}
+.button{
+ transition: 0.75s;
+  border-radius: 4px;
+  font-family: 'Aldrich', sans-serif; 
+  box-shadow: 4px 4px 8px #fff;
+  color: #fff;
+  background-color:#23314D;
+}
+.button:hover{
+  color: #28C2E0;
+  box-shadow: 6px 6px 8px #fff;
+  background-color:#616B80;
+}
+.button:active{
+  background-color: #fff;
+  color:#28C2E0;
+  box-shadow: 8px 8px 12px  #28C2E0;
+}
+.img-comp-container {
+  position: relative;
+  height: 240px; /*should be the same height as the images*/
+}
+
+.img-comp-img {
+  border-radius: 8px;
+  position: absolute;
+  /* width: 360px;
+  height: 240px; */
+  overflow: hidden;
+}
+
+.img-comp-img img {
+  display: block;
+
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index: 9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 50px;
+  height: 30px;
+  background-color: #28C2E0;
+  opacity: 0.75;
+  border-radius: 25%;
+  animation: animateSlider 1s linear infinite;
+
+}
+.img-comp-slider::before{
+  content: '<';
+}
+.img-comp-slider::after{
+  margin-left: 18px;
+  content: '>';
+}
+@keyframes animateSlider {
+  0% {
+    opacity: 0.35;
+  }
+  50%{
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 0.35;
+  }
+}
+.active{
+  background-color: #fff;
+  color:#28C2E0;
+  box-shadow: 8px 8px 12px  #28C2E0;
+}
