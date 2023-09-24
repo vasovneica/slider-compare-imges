@@ -17,7 +17,7 @@ function initComparisons() {
 
     function compareImages(img) {
         autoMoving()
-     button_1.onclick=()=>{
+        button_1.onclick=()=>{
             autoMovingFlag = false
             button_1.classList.add("active");
             button_2.classList.remove("active");
@@ -73,18 +73,18 @@ function initComparisons() {
                     return;
                 }
                 if (movingCounter == 5) {
-                    firstImg.src = 'https://github.com/vasovneica/slider-compare-imges/blob/main/compare_images/sport_demo.jpg?raw=true';
+                    firstImg.src = 'https://github.com/vasovneica/slider-compare-imges/blob/main/compare_images/sport_demo_sec_var1.jpg?raw=true';
                     button_1.classList.add("active");
                     console.log('5');
                 }
                 if (movingCounter == 3) {
-                    firstImg.src = '../compare_images/sport_demo_third_var.jpg';
+                    firstImg.src = 'https://github.com/vasovneica/slider-compare-imges/blob/main/compare_images/sport_demo_third_var.jpg?raw=true';
                     button_1.classList.remove("active");
                     button_2.classList.add("active");
                     console.log('3');
                 }
                 if (movingCounter == 1) {
-                    firstImg.src = '../compare_images/sport_demo_fourth_var1.jpg';
+                    firstImg.src = 'https://github.com/vasovneica/slider-compare-imges/blob/main/compare_images/sport_demo_fourth_var1.jpg?raw=true';
                     button_2.classList.remove("active");
                     button_3.classList.add("active");
                     console.log('1');
