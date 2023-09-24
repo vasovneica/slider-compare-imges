@@ -6,7 +6,6 @@ function initComparisons() {
     x = document.getElementsByClassName("img-comp-overlay");
     firstImg = document.getElementById('first-img');
     secondImg = document.getElementById('second-img');
-    secondImg.src = 'https://github.com/vasovneica/slider-compare-imges/blob/main/compare_images/sport_demo_sec_var.jpg?raw=true'
     button_1 = document.getElementById('button_1');
     button_2 = document.getElementById('button_2');
     button_3 = document.getElementById('button_3');
