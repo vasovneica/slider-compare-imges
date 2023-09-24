@@ -69,18 +69,18 @@ function initComparisons() {
                     return;
                 }
                 if (movingCounter == 5) {
-                    firstImg.src = '/compare_images/sport_demo_sec_var1.jpg';
+                    firstImg.src = './compare_images/sport_demo_sec_var1.jpg';
                     button_1.classList.add("active");
                     console.log('5');
                 }
                 if (movingCounter == 3) {
-                    firstImg.src = '/compare_images/sport_demo_third_var.jpg';
+                    firstImg.src = './compare_images/sport_demo_third_var.jpg';
                     button_1.classList.remove("active");
                     button_2.classList.add("active");
                     console.log('3');
                 }
                 if (movingCounter == 1) {
-                    firstImg.src = '/compare_images/sport_demo_fourth_var1.jpg';
+                    firstImg.src = './compare_images/sport_demo_fourth_var1.jpg';
                     button_2.classList.remove("active");
                     button_3.classList.add("active");
                     console.log('1');
