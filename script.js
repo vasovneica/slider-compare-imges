@@ -1,4 +1,5 @@
 initComparisons();
+
 function initComparisons() {
 
     var autoMovingFlag = true
@@ -6,40 +7,37 @@ function initComparisons() {
     x = document.getElementsByClassName("img-comp-overlay");
     firstImg = document.getElementById('first-img');
     secondImg = document.getElementById('second-img');
-    button_1 = document.getElementById('button_1');
-    button_2 = document.getElementById('button_2');
-    button_3 = document.getElementById('button_3');
-
+    let button_1 = document.getElementById('button_1');
+    let button_2 = document.getElementById('button_2');
+    let button_3 = document.getElementById('button_3');
+    var buttons = document.querySelectorAll('.button');
+    var paths=['https://github.com/vasovneica/slider-compare-imges/blob/main/compare_images/sport_demo_sec_var1.jpg?raw=true',
+    'https://github.com/vasovneica/slider-compare-imges/blob/main/compare_images/sport_demo_third_var.jpg?raw=true',
+    'https://github.com/vasovneica/slider-compare-imges/blob/main/compare_images/sport_demo_fourth_var1.jpg?raw=true']
     for (i = 0; i < x.length; i++) {
         compareImages(x[i]);
     }
 
-
     function compareImages(img) {
-        autoMoving()
-        button_1.onclick=()=>{
-            autoMovingFlag = false
-            button_1.classList.add("active");
-            button_2.classList.remove("active");
-            button_3.classList.remove("active");
-            firstImg .src = 'https://github.com/vasovneica/slider-compare-imges/blob/main/compare_images/sport_demo_sec_var1.jpg?raw=true';
+        autoMoving()     
+        // обходим список кнопок
+        buttons.forEach(function(button) {
+          // добавляем обработчик события на каждую кнопку
+          button.addEventListener('click', function() {
+            // удаляем класс 'active' у всех кнопок
+            buttons.forEach(function(button) {
+              button.classList.remove('active');
+            });
+            // добавляем класс 'active' только на текущую кнопку
+            this.classList.add('active');
+            autoMovingFlag=false;
+            console.log(this.id.split('_')[1]);
+            let x=this.id.split('_')[1]-1;
+            firstImg.src=paths[x];
+            console.log(firstImg.src);
+          });
+        });
 
-        }
-        button_2.onclick=()=>{
-            autoMovingFlag = false
-            button_1.classList.remove("active");
-            button_2.classList.add("active");
-            button_3.classList.remove("active");
-            firstImg .src = 'https://github.com/vasovneica/slider-compare-imges/blob/main/compare_images/sport_demo_third_var.jpg?raw=true';
-        }
-        
-        button_3.onclick=()=>{
-            autoMovingFlag = false
-            button_1.classList.remove("active");
-            button_2.classList.remove("active");
-            button_3.classList.add("active");
-            firstImg .src = 'https://github.com/vasovneica/slider-compare-imges/blob/main/compare_images/sport_demo_fourth_var1.jpg?raw=true';
-        }
         var slider, img, clicked = 0, w, h;
         w = img.offsetWidth;
         h = img.offsetHeight;
