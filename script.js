@@ -1,3 +1,4 @@
+initComparisons();
 function initComparisons() {
 
     var autoMovingFlag = true
