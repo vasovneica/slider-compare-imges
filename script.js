@@ -69,7 +69,7 @@ function initComparisons() {
                     return;
                 }
                 if (movingCounter == 5) {
-                    firstImg.src = '../compare_images/sport_demo_sec_var1.jpg';
+                    firstImg.src = 'https://github.com/vasovneica/slider-compare-imges/blob/main/compare_images/sport_demo.jpg?raw=true';
                     button_1.classList.add("active");
                     console.log('5');
                 }
